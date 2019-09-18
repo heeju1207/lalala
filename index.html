@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#straw{width: 300px;}
+		#star{opacity: 0; position : absolute;}
+	</style>
+
+</head>
+<body id="mybody">
+	<div id="blackbox"></div>
+	<img src="straw.gif" id="straw">
+	<img src="star.gif" id="star">
+
+	<audio id="mmm" loop>
+ 	<source src="Drum.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+		straw.onclick = function(){
+			mmm.play();
+			straw.style.opacity = "0"
+			star.style.opacity = "1"
+			mybody.style.background = "url('star.gif')";
+			mybody.style.backgroundSize = "200px auto";
+		}
+		//오디오다음에 loop붙이면 노래반복재생
+	</script>
+
+</body>
+</html>
